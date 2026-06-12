@@ -1,109 +1,187 @@
-# CPH VS Code Extension (LeetCode)
+# Contest Companion
 
 ## Overview
-The **CPH VS Code Extension (LeetCode)** is designed to simplify competitive programming workflows. It automates the process of fetching test cases from LeetCode, allows you to run your code against those test cases, and supports multiple programming languages (e.g., C++, Python). This extension ensures a smooth coding and testing experience directly within Visual Studio Code.
+
+Contest Companion is a Visual Studio Code extension designed to simplify competitive programming workflows. It automates test case retrieval, code execution, and result verification directly within VS Code, allowing users to focus on problem-solving rather than manual testing.
+
+The extension currently supports multiple programming languages and provides a streamlined environment for practicing coding problems efficiently.
+
+---
+
+## Project Objectives
+
+The primary objectives of Contest Companion are:
+
+* Automate test case fetching from coding platforms.
+* Reduce manual effort in running and validating solutions.
+* Provide a seamless coding experience within VS Code.
+* Support multiple programming languages through a unified workflow.
+* Create a scalable framework for future competitive programming integrations.
 
 ---
 
 ## Features
-- **Automatic Test Case Handling**: Fetches and prepares LeetCode problem test cases automatically.
-- **Multi-language Support**: Compatible with C++ and Python solutions.
-- **Integrated Task Runner**: Quickly execute your code using a predefined VS Code task.
-- **Customizable Workflow**: Modular setup to allow future enhancements.
+
+| Feature                      | Description                               |
+| ---------------------------- | ----------------------------------------- |
+| Automatic Test Case Fetching | Retrieves sample test cases automatically |
+| Multi-Language Support       | Supports C++ and Python solutions         |
+| Integrated Execution         | Run solutions directly from VS Code       |
+| Output Verification          | Compares outputs against expected results |
+| Modular Architecture         | Easy to extend and customize              |
 
 ---
 
-## Prerequisites
-Before using the extension, ensure you have the following installed on your system:
+## System Workflow
 
-- **Node.js**: [Download and install Node.js](https://nodejs.org/).
-- **VS Code**: [Download and install Visual Studio Code](https://code.visualstudio.com/).
-- **C++ Compiler**: (e.g., `g++`) for running C++ code.
-- **Python Interpreter**: (e.g., `python3`) for running Python code.
+The extension follows the workflow below:
+
+1. Fetch problem test cases.
+2. Store test cases in a structured format.
+3. Execute the user solution.
+4. Compare generated output with expected output.
+5. Display results in the terminal.
 
 ---
 
 ## Installation
 
-1. Clone this repository to your local machine:
-   ```bash
-   git clone https://github.com/Poojan-Bansal/CPH-LeetCode-Extension.git
-   ```
+### Clone the Repository
 
-2. Open the project in Visual Studio Code:
-   ```bash
-   code <path-to-project>
-   ```
+```bash
+git clone https://github.com/Aryan-soni6387/Contest-Companion-Vscode.git
+```
 
-3. Navigate to the directory folder where all backend files are stored.
+### Open the Project
 
-4. Run the following command in the terminal to install backend-specific dependencies:
-    ```bash
-    cd directory
-    npm install
-    ```
+```bash
+code Contest-Companion-Vscode
+```
 
+### Install Dependencies
 
-5. Come out of Directory and You're all set! Follow the usage instructions below to start using the extension.
+Navigate to the backend directory and install dependencies:
+
+```bash
+npm install
+```
 
 ---
 
 ## Usage
 
-### Writing and Running Code
+### Writing Solutions
 
-1. Open the project folder in **Visual Studio Code**.
-2. Write your solution code in either:
-   - `solution.cpp` (for C++), or
-   - `solution.py` (for Python).
-3. Press `Ctrl+Shift+B` after writing your code.
-4. The extension will:
-   - Fetch the test cases.
-   - Run your code against the test cases.
-   - Display the results directly in the terminal.
+Create your solution in either:
+
+```text
+solution.cpp
+```
+
+or
+
+```text
+solution.py
+```
+
+### Running the Solution
+
+Press:
+
+```text
+Ctrl + Shift + B
+```
+
+The extension will:
+
+* Fetch available test cases
+* Execute the solution
+* Validate outputs
+* Display execution results
 
 ---
 
 ## How It Works
 
-1. **Task Configuration**:
-   - The extension uses a preconfigured VS Code `tasks.json` file located in `.vscode/`.
-   - This file automates the build process and integrates the execution workflow.
+### Test Case Retrieval
 
-2. **Fetching Test Cases**:
-   - Test cases are fetched using the LeetCode API.
-   - These fetched test cases are stored in a JSON file for processing.
+Contest Companion retrieves problem test cases and stores them locally for execution.
 
-3. **Code Execution**:
-   - A dedicated `run` file is executed, which prompts the user to select a compiler (e.g., `g++` for C++ or `python3` for Python).
-   - The saved test cases from the JSON file are then executed using the selected compiler or interpreter.
+### Solution Execution
 
-4. **Result Display**:
-   - After execution, the extension checks whether all test cases passed.
-   - A summary of the results (pass/fail) is displayed directly in the terminal, providing immediate feedback on the solution.
+The extension automatically invokes the selected compiler or interpreter and runs the user's solution.
+
+### Result Validation
+
+Generated outputs are compared against expected outputs, and the results are summarized in the terminal.
 
 ---
 
+## Technologies Used
 
-## Support
-If you encounter any issues or have questions, feel free to open an issue on the GitHub repository.
+* JavaScript
+* Node.js
+* VS Code Extension API
+* C++
+* Python
+* JSON
+
+---
+
+## Repository Structure
+
+```text
+Contest-Companion-Vscode/
+
+├── .vscode/
+│   └── tasks.json
+│
+├── backend/
+│   ├── package.json
+│   ├── runner.js
+│   └── fetchTestCases.js
+│
+├── solution.cpp
+├── solution.py
+├── README.md
+└── LICENSE
+```
+
+---
+
+## Future Enhancements
+
+* Support for additional coding platforms
+* Custom test case management
+* Performance benchmarking
+* Submission analytics
+* Enhanced user interface
 
 ---
 
 ## Contribution
-Contributions are welcome! If you'd like to enhance the extension or fix bugs:
+
+Contributions are welcome.
 
 1. Fork the repository.
-2. Create a new branch for your feature:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add feature description"
-   ```
-4. Push your changes and submit a pull request.
+2. Create a feature branch.
+3. Commit your changes.
+4. Push the branch.
+5. Submit a Pull Request.
 
 ---
 
+## Author
 
+Aryan Soni
+
+B.Tech, Electrical Engineering
+Indian Institute of Technology Roorkee
+
+GitHub: https://github.com/Aryan-soni6387
+
+---
+
+## Support
+
+For issues, suggestions, or feature requests, please open an issue in the repository.
