@@ -173,15 +173,6 @@ Contributions are welcome.
 
 ## Author
 
-Aryan Soni
-
-B.Tech, Electrical Engineering
-Indian Institute of Technology Roorkee
+Aryan Soni 🎓 B.Tech Student, IIT Roorkee
 
 GitHub: https://github.com/Aryan-soni6387
-
----
-
-## Support
-
-For issues, suggestions, or feature requests, please open an issue in the repository.
